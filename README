@@ -1,13 +1,22 @@
 SpiderSense
 ===========
 
-Introduction goes here.
+Use this plugin to determine if a request is from a spider or not. Can be useful in avoiding expensive operations. 
 
 
 Example
 =======
 
-Example goes here.
+class AwesomeController < ActionController::Base
+  
+  def index
+    if is_spider?
+      # Do really cool but expensive stuff
+    else
+      # just render the stock page for indexing by the spider
+    end
+  end
+end
 
 
 Copyright (c) 2008 Joshua Warchol, released under the MIT license
